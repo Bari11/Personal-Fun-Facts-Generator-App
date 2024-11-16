@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const factText = document.getElementById('fact-text');
     const generateBtn = document.getElementById('generate-btn');
 
-    // Array of fun facts
+    // Array of personal fun facts
     const funFacts = [
         "I am Bareena Deshmukh.",
         "I am in Second Year of Engineering.",
@@ -11,26 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
         "My favorite colour is red.",
     ];
 
-    // Function to generate random fact
+    // Array of colors for facts
+    const colors = [
+        '#FF6B6B',  // Bright red for your name
+        '#4ECDC4',  // Teal for education
+        '#9B59B6',  // Purple for personality
+        '#3498DB',  // Blue for IEEE membership
+        '#E74C3C'   // Red for favorite color fact
+    ];
+
     function generateFact() {
-        // Remove fade-in class
         factText.classList.remove('fade-in');
-        
-        // Trigger reflow
         void factText.offsetWidth;
         
-        // Get random fact
         const randomIndex = Math.floor(Math.random() * funFacts.length);
         const fact = funFacts[randomIndex];
         
-        // Add fade-in class and update text
+        // Add random color to fact text
+        factText.style.color = colors[randomIndex];
+        
         factText.classList.add('fade-in');
         factText.textContent = fact;
     }
 
-    // Add click event listener to button
     generateBtn.addEventListener('click', generateFact);
-
-    // Generate initial fact
     generateFact();
 });
