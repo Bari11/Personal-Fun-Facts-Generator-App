@@ -1,6 +1,6 @@
 body {
-    /* Replace gradient with background image */
-    background: url('https://github.com/Bari11/Personal-Fun-Facts-Generator-App/blob/main/appimg.jpg');
+    /* Using raw GitHub URL format for the background image */
+    background: url('https://raw.githubusercontent.com/Bari11/Personal-Fun-Facts-Generator-App/main/appimg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,21 +8,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center align all text */
+    text-align: center;
+    margin: 0; /* Added to remove default margins */
+    padding: 0; /* Added to remove default padding */
 }
 
 .container {
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    /* Add transparent background block */
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
+    margin: 20px; /* Added for better mobile spacing */
 }
 
-/* Update button hover effects */
 #generate-btn {
-    /* ... existing styles ... */
+    background: #00ff88;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #1a1a1a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     position: relative;
     overflow: hidden;
 }
@@ -36,4 +47,5 @@ body {
 #generate-btn:active {
     transform: translateY(0) scale(0.95);
 }
+
 
