@@ -1,6 +1,6 @@
 body {
     /* Using raw GitHub URL format for the background image */
-    background: url('https://raw.githubusercontent.com/Bari11/Personal-Fun-Facts-Generator-App/main/appimg.jpg');
+    background: url('https://github.com/Bari11/Personal-Fun-Facts-Generator-App/blob/main/appimg.jpg?raw=true');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
