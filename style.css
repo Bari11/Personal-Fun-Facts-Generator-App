@@ -1,6 +1,6 @@
 body {
     /* Using raw GitHub URL format for the background image */
-    background: url('https://github.com/Bari11/Personal-Fun-Facts-Generator-App/blob/main/appimg.jpg?raw=true');
+    background: url('https://raw.githubusercontent.com/Bari11/Personal-Fun-Facts-Generator-App/main/appimg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -17,35 +17,22 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Transparent background */
     border-radius: 20px;
     margin: 20px; /* Added for better mobile spacing */
 }
 
-#generate-btn {
-    background: #00ff88;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #1a1a1a;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
+/* Centering content within the container */
+.fact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    height: 100%; 
+    text-align: center;
 }
 
-#generate-btn:hover {
-    background: #00cc6f;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
-}
+/* Other styles remain unchanged */
 
-#generate-btn:active {
-    transform: translateY(0) scale(0.95);
-}
 
 
