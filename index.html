@@ -3,21 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Fun Facts Generator</title>
-    <link rel="stylesheet" href="{{ url_for( filename='style.css') }}">
-    <link rel="script" href="{{ url_for( filename='script.js') }}"> 
-
+    <title>Star Facts</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #222;
+            color: #eee;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #fact-display {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="fact-box">
-            <h1>Tech Fun Facts Generator</h1>
-            <div class="fact-content">
-                <p id="fact-text">Click the button to generate a random fun fact!</p>
-            </div>
-            <button id="generate-btn">Generate Fact</button>
-        </div>
+        <h1>Did you know?</h1>
+        <p id="fact-display"></p>
+        <button id="generate-fact">New Fact</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        const facts = [
+            "Stars are giant balls of hot gas: They are primarily composed of hydrogen and helium, which undergo nuclear fusion in their cores, releasing enormous amounts of energy in the form of light and heat.",
+            "The Sun is a star: It's just an average-sized star, but it's the closest one to Earth and is the reason why life exists on our planet.",
+            "Stars have a life cycle: They are born from collapsing clouds of gas and dust, shine brightly for millions to billions of years, and eventually die, often in spectacular fashion as supernovae.",
+            "Stars come in different colors:  A star's color indicates its temperature, with blue stars being the hottest and red stars being the coolest.",
+            "Stars twinkle because of Earth's atmosphere:  The light from a star gets bent and distorted as it passes through the Earth's atmosphere, which makes it appear to twinkle.",
+            "Constellations are patterns of stars: Ancient cultures saw these patterns as animals, objects, and mythical figures.",
+            "Neutron stars are incredibly dense: They are formed when massive stars collapse at the end of their lives, cramming more mass than the Sun into a space the size of a city.",
+            "Black holes are even stranger than neutron stars: They form from the most massive stars and have such strong gravity that nothing, not even light, can escape.",
+            "We can see billions of stars in our galaxy: The Milky Way is estimated to contain hundreds of billions of stars, and there are billions of galaxies in the observable universe.",
+            "Studying stars helps us understand the universe: By analyzing starlight, astronomers can learn about a star's composition, temperature, age, and distance, giving us clues about the history and evolution of the universe."
+        ];
+        
+        const factDisplay = document.getElementById('fact-display');
+        const generateFactButton = document.getElementById('generate-fact');
+        
+        generateFactButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        }); 
+    </script>
 </body>
 </html>
+
